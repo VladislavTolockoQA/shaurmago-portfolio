@@ -1,0 +1,36 @@
+<!-- Файл: payment.html (ОБНОВЛЕН) -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Оплата | ShaurmaGo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Оплата заказа</h2>
+    <p id="orderInfo">Загрузка информации о заказе...</p>
+
+    <!-- Форма теперь имеет ID, чтобы ее можно было найти в JS -->
+    <form id="paymentForm" style="display: none;">
+      <label>Номер карты</label>
+      <input type="text" placeholder="1234 5678 9012 3456" required />
+
+      <label>Срок действия (MM/YY)</label>
+      <input type="text" placeholder="MM/YY" required pattern="\d{2}/\d{2}" />
+
+      <label>CVV</label>
+      <input type="text" placeholder="123" required pattern="\d{3,4}" />
+
+      <button type="submit">Подтвердить оплату</button>
+      <button type="button" id="cancelBtn">Отменить и вернуться в меню</button>
+    </form>
+
+    <p id="resultMsg"></p>
+  </div>
+
+  <!-- Вся логика теперь в этом файле -->
+  <script src="scripts.js"></script>
+</body>
+</html>

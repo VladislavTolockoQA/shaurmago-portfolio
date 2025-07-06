@@ -1,0 +1,22 @@
+# Файл: .gitignore
+
+# Python / Flask
+venv/
+__pycache__/
+*.pyc
+*.db
+*.sqlite3
+
+# Node.js / Cypress
+node_modules/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Секреты и переменные окружения
+.env
+*.env
+
+# Системные файлы macOS и Windows
+.DS_Store
+Thumbs.db
